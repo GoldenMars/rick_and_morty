@@ -52,9 +52,16 @@ class CustomListTile extends StatelessWidget {
                             children: [
                               Text('Species:'),
                               const SizedBox(height: 2),
-                              Text(
-                                result.species,
-                                overflow: TextOverflow.ellipsis,
+                              Container(
+                                constraints: BoxConstraints(
+                                  maxWidth:
+                                      MediaQuery.of(context).size.width / 4,
+                                ),
+                                child: Text(
+                                  result.species,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                ),
                               ),
                             ],
                           ),
@@ -64,7 +71,17 @@ class CustomListTile extends StatelessWidget {
                             children: [
                               Text('Gender:'),
                               const SizedBox(height: 2),
-                              Text(result.gender),
+                              Container(
+                                constraints: BoxConstraints(
+                                  maxWidth:
+                                      MediaQuery.of(context).size.width / 4,
+                                ),
+                                child: Text(
+                                  result.gender,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 1,
+                                ),
+                              ),
                             ],
                           ),
                         ],
@@ -75,7 +92,8 @@ class CustomListTile extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 20, left: 20),
+              //TODO: реализовать список : избранные.
+              padding: const EdgeInsets.only(right: 10, left: 10),
               child: Icon(Icons.star),
             ),
           ],

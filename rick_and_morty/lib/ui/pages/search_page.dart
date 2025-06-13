@@ -5,6 +5,8 @@ import 'package:rick_and_morty/bloc/character_bloc.dart';
 import 'package:rick_and_morty/data/models/character.dart';
 import 'package:rick_and_morty/ui/widgets/custom_list_tile.dart';
 
+//TODO: добваить поиск по имени
+
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
 

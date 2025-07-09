@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+//TODO: добавит настедника для реализации донного интерфейса
+
 abstract class TwoDimensionalScrollView extends StatelessWidget {
   final dynamic primary;
 
